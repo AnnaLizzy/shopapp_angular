@@ -12,7 +12,7 @@ import {environment} from '../environment/environtment'
 
 export class UserService {
   private apiRegister = environment.apiBaseUrl+'/user/register'
-  private apiLogin = 'http://localhost:8088/api/v1/user/login'
+  private apiLogin = environment.apiBaseUrl+'/user/login'
   private apiConfig = {
     headers :this.createHeader()
   }

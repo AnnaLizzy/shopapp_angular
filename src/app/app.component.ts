@@ -1,12 +1,11 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from "./footer/footer.component";
-import { HeaderComponent } from "./header/header.component";
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { UserService } from './service/user.service';
+import { HomeComponent } from './component/home/home.component';
+import { FooterComponent } from "./component/footer/footer.component";
+import { HeaderComponent } from "./component/header/header.component";
+import { RegisterComponent } from './component/register/register.component';
+import { LoginComponent } from './component/login/login.component';
 import {  HttpClientModule } from '@angular/common/http';
 
 
