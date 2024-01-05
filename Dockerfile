@@ -7,6 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+RUN npm install -g @angular/cli
 RUN ng build --prod
 
 # Sử dụng hình ảnh Nginx để phục vụ ứng dụng đã xây dựng

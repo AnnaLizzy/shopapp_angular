@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/shopapp-angular",
-            "index": "src/index.html",
+            "index": "src/index.html",            
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -61,7 +61,6 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
@@ -70,7 +69,8 @@
             "development": {
               "buildTarget": "shopapp-angular:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

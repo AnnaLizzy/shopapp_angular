@@ -5,6 +5,9 @@
 .space{
     height: 10px;
 }
+.register-header{
+    text-align: center;
+}
 .register-form{
     background-color: rgb(12, 12, 55) ;
     border-radius: 10px;
@@ -28,12 +31,13 @@
 }
 .password-toggle{
     position:absolute ;
-    top: 50%;
+    top: 40%;
     right: 10px;
-    //transform: translateY(-50%);
+    transform: translateY(-50%);
     //color: rgb(105, 244, 181);
     cursor: pointer;
 } 
+
 .register-button{
     background: linear-gradient(to right,rgb(225,64,100),rgb(126,43,237));
     color: white;
