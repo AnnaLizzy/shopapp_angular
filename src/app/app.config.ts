@@ -4,6 +4,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { routes } from './app.routes';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { RoleService } from './service/role.service';
 //you need to import the needed providers from the module and declare them in the new configuration function
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
@@ -13,7 +14,6 @@ export const appConfig: ApplicationConfig = {
       useClass: TokenInterceptor,
       multi:true
     }
-  ]
-  
-  
+    
+  ]  
 };

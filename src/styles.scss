@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --cdkVirtualScrollViewport: 64px;
+  }
+  
+  body {
+    margin: 0;
+    color: rgba(0, 0, 0, .85);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    background-color: #F8F9FE;
+    font-feature-settings: 'tnum'
+  }
+  
+  section.content {
+    border-radius: 10px;
+    background: #fff;
+    padding: 24px;
+  }
+  
+  
+  
+  .text-primary {
+    color: #0054A5 !important;
+  }
+  
+  .text-default {
+    color: #F8F8F8 !important;
+  }

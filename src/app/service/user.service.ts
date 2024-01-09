@@ -9,7 +9,6 @@ import {environment} from '../environment/environtment'
   providedIn: 'root'
 })
 
-
 export class UserService {
   private apiRegister = environment.apiBaseUrl+'/user/register'
   private apiLogin = environment.apiBaseUrl+'/user/login'
