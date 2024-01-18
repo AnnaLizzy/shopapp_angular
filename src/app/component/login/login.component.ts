@@ -58,8 +58,7 @@ export class LoginComponent {
         debugger;
         if (error instanceof HttpErrorResponse) {
           console.error('HTTP Error:', error.status);
-          console.error('Error Details:', error.error);     
-          
+          console.error('Error Details:', error.error);               
         }
       },
     });
@@ -77,8 +76,7 @@ export class LoginComponent {
       next: (response: LoginRespone) => {
         debugger;
         //this.router.navigate(['/login']);
-        const { token } = response;
-       
+        const { token } = response;       
         if (this.rememberMe) {
           this.tokenService.setToken(token);
         } 
@@ -90,8 +88,7 @@ export class LoginComponent {
       error: (error: any) => {       
         if (error instanceof HttpErrorResponse) {
           console.error('HTTP Error:', error.status);
-          console.error('Error Details:', error.error);     
-          
+          console.error('Error Details:', error.error);               
         }
       },
     });

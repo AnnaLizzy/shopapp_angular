@@ -1,3 +1,5 @@
+import { ProductImage } from "./product.image"
+
 export interface Products{
     id: number
     name : string
@@ -6,4 +8,5 @@ export interface Products{
     description : string
     category_id : number
     url : string
+    product_images : ProductImage[]
 }

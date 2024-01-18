@@ -19,4 +19,8 @@ export class ProductService {
       
     return this.http.get<Products[]>(this.apiGetProducts, { params });
   }
+  getDetailProduct(productId : number){
+    return this.http.get(environment.apiBaseUrl+'/products/'+productId)
+    
+  }
 }
