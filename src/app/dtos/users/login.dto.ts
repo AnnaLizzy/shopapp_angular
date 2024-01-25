@@ -1,23 +1,17 @@
-import{
-    IsString,
-    IsNotEmpty,
-    IsPhoneNumber,
-    IsDate  
-
-} from 'class-validator'
+import { IsString, IsNotEmpty, IsPhoneNumber, IsDate } from 'class-validator';
 export class LoginDTO {
-    @IsPhoneNumber()
-    phone_number: string;
+  @IsPhoneNumber()
+  phone_number: string;
 
-    @IsString()
-    @IsNotEmpty()
-    password: string
+  @IsString()
+  @IsNotEmpty()
+  password: string;
 
-    role_id: number
-    
-    constructor(data:any){
-        this.phone_number=data.phone
-        this.password=data.password
-        this.role_id=data.role_id
-    }
+  role_id: number;
+
+  constructor(data: any) {
+    this.phone_number = data.phone;
+    this.password = data.password;
+    this.role_id = data.role_id;
+  }
 }

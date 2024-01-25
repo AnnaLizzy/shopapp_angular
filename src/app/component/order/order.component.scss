@@ -1,5 +1,7 @@
+$color-main: #FFFFFF;
+
 .intro-section{
-    color: white;
+    color: $color-main;
     padding: 20px;
     text-align: center;
 }
@@ -9,31 +11,36 @@
 .form-control{
     background-color: rgb(19, 23, 42);
     border: 1px solid rgb(29, 33, 54);
-    color: white;
+    color: $color-main;
 }
 .form-control:focus{
-    border-color: white;
+    border-color: $color-main;
     background-color: rgb(19, 23, 42);
 }
 .form-label{
-    color: white;
+    color: $color-main;
 }
 .product-order{
-    color: rgb(105, 244, 181);
+    color: $color-main;
+}
+.text-end{
+    color: $color-main;
 }
 table{
     width: 100%;
     border-radius: 10px;
     border: none;
     border-collapse: separate;
-    border: 1px solid white;
+    border: 1px solid $color-main;
     border-spacing: 0;
     background-color: rgb(12, 13, 54);
+    th,td{
+        padding: 10px;
+        text-align: center;
+        color: $color-main;
+    }
 }
-th,td{
-    padding: 10px;
-    text-align: center;
-}
+
 .product-info{
     display: flex;
     align-items: center;
@@ -45,12 +52,12 @@ th,td{
     margin-right: 10px;
 }
 .product-name{
-    color: white;
+    color: $color-main;
     margin-right: 10px;
 }
 .btn-gradient{
     background: linear-gradient(to right,rgb(225,64,180),rgb(126,43,237));
-    color: white;
+    color: $color-main;
     border-radius: 30px;
     width: 200px;
 }

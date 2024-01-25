@@ -4,7 +4,7 @@ import { ProductService } from "./product.service";
 @Injectable({
     providedIn:'root'
 })
-export class cartService{
+export class CartService{
     private cart : Map<number, number> = new Map()
     constructor(private productService: ProductService){
         const storedCart =localStorage.getItem('cart')
@@ -31,5 +31,8 @@ export class cartService{
     getCart(): Map<number,number>{
        return this.cart
     }
-    
+    clearCart():void{
+        this.cart.clear()
+        this.saveCartToLocalStorage()
+    }
 }

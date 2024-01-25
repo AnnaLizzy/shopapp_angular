@@ -74,8 +74,8 @@ export class LoginComponent {
     };
     this.userService.Login(loginDTO).subscribe({
       next: (response: LoginRespone) => {
-        debugger;
-        //this.router.navigate(['/login']);
+        
+        //this.router.navigate(['/home']);
         const { token } = response;       
         if (this.rememberMe) {
           this.tokenService.setToken(token);
@@ -83,7 +83,7 @@ export class LoginComponent {
         alert('Login success!');
       },
       complete: () => {
-        debugger;
+        
       },
       error: (error: any) => {       
         if (error instanceof HttpErrorResponse) {

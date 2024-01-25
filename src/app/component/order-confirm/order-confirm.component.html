@@ -17,42 +17,31 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <div class="product-info">
-              <img
-                class="product-image"
-                src="../../assets/photos/photo2.jpg"
-                alt="Photto Image"
-              />
-              <span class="product-name">Tên sản phẩm</span>
-            </div>
-          </td>
-          <td>2</td>
-          <td>100.000 đ</td>
-          <td>200.000 đ</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="product-info">
-              <img
-                class="product-image"
-                src="../../assets/photos/photo2.jpg"
-                alt="Photto Image"
-              />
-              <span class="product-name">Iphone 15 pro max 250GB</span>
-            </div>
-          </td>
-          <td>2</td>
-          <td>100.000 đ</td>
-          <td>200.000 đ</td>
-        </tr>
-        
+        <ng-container *ngFor="let item of cartItems">
+          <tr>
+            <td>
+              <div class="product-info">
+                <img alt="photo" [src]="item.product.thumbnail" class="product-image" >
+                <span class="product-name">{{ item.product.name }}</span>
+              </div>
+            </td>
+            <td>{{ item.quantity }}</td>
+            <td>{{  item.product.price | currency:'VND':'symbol':'1.0-0'}}</td>
+            <td>{{ item.product.price * item.quantity | currency:'VND':'symbol':'1.0-0'}}</td>
+          </tr>
+        </ng-container>
       </tbody>
     </table>
-    <div class="text-center mt-3">
-      <button type="button" class="btn btn-gradient">Tiếp tục mua sắm</button>
+    <div class="input-group mb-3 mt-3 col-4">
+      <input type="text" class="form-control" placeholder="Mã giảm giá" name="couponCode" [(ngModel)]="couponCode">
+      <div class="input-group-append btn-left">
+        <button class="btn btn-outline-secondary">Áp dụng mã </button>
+      </div>
     </div>
+    <p class="mb-0">Tổng tiền :{{ totalAmount | currency:'VND':'symbol':'1.0-0' }}</p>
+    <div class="text-center mt-3 ">
+      <button type="button" class="btn btn-gradient">Confirm</button>
+    </div>    
   </div>
 </div>
 <app-footer></app-footer>

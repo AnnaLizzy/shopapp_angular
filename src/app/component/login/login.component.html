@@ -46,7 +46,7 @@
             <option  *ngFor="let role of roles" [ngValue]="role">{{role.name}}</option>           
           </select>
         </div>
-        <button class="login-button" (click)="Login()">Đăng nhập</button>
+        <button class="login-button" [disabled]="this.loginForm.invalid" (click)="Login()">Đăng nhập</button>
         <div class="divider"></div>
         <p class="text-center">
           Bạn chưa đăng ký ?
